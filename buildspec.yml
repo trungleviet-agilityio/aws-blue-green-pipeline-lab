@@ -2,7 +2,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Using Dockerfile build; no dependencies to install
+      - echo "Using Dockerfile build"
+      - echo "No dependencies to install"
   build:
     commands:
       - echo No build step needed
