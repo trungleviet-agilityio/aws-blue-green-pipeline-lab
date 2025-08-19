@@ -4,21 +4,16 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - echo Installing Node.js dependencies...
+      - echo Installing dependencies...
       - npm install
   build:
     commands:
-      - echo Building the application...
+      - echo Build started...
       - npm run build
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed...
 artifacts:
   files:
     - '**/*'
   base-directory: .
-  discard-paths: no
-  cache:
-    paths:
-      - node_modules/**/*
-      - .next/cache/**/*
