@@ -1,13 +1,10 @@
 {
-  "name": "car-rental-app",
+  "name": "sample-app",
   "version": "1.0.0",
-  "description": "Sample Node.js app for AWS CodePipeline lab",
-  "main": "app.js",
+  "description": "Sample Node.js app for AWS CodePipeline",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "echo 'Build complete'"
+    "start": "node index.js"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "dependencies": {}
 }
