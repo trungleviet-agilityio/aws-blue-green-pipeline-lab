@@ -1,18 +1,14 @@
 version: 0.2
 phases:
   install:
-    runtime-versions:
-      nodejs: 20
     commands:
-      - echo Installing dependencies...
-      - npm install
+      - echo Using Dockerfile build; no dependencies to install
   build:
     commands:
-      - echo Build started...
-      - npm run build
+      - echo No build step needed
   post_build:
     commands:
-      - echo Build completed...
+      - echo Build completed
 artifacts:
   files:
     - '**/*'
