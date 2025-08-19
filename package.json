@@ -2,9 +2,9 @@
   "name": "sample-app",
   "version": "1.0.0",
   "description": "Sample Node.js app for AWS CodePipeline",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "dependencies": {}
 }
