@@ -1,15 +1,21 @@
 version: 0.2
 phases:
   install:
+    runtime-versions:
+      nodejs: 20
     commands:
-      - echo "Using Dockerfile build"
-      - echo "No dependencies to install"
+      - echo Installing dependencies...
+      - npm install
   build:
     commands:
-      - echo No build step needed
+      - echo "Embedding version metadata for visibility"
+      - |
+        COMMIT=${CODEBUILD_RESOLVED_SOURCE_VERSION:-unknown}
+        DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+        echo "{\"commit\":\"$COMMIT\",\"deployedAt\":\"$DATE\"}" > version.json
   post_build:
     commands:
-      - echo Build completed
+      - echo Build completed...
 artifacts:
   files:
     - '**/*'
